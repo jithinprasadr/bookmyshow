@@ -1,13 +1,17 @@
 package com.microservices.bookmyshow.theatrecatalogueservice.repo;
 
-import org.springframework.data.jpa.repository.JpaRepository;
+import java.util.List;
 
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
+
+import com.microservices.bookmyshow.theatrecatalogueservice.entity.Show;
 import com.microservices.bookmyshow.theatrecatalogueservice.entity.Theatre;
 
 
 public interface TheatreRepository extends JpaRepository<Theatre, Integer>{
 	
-	//ArrayList<Theatre> findByMovieIdAndCityIdAndDate(int movieId, int cityId, java.time.LocalDateTime showDateTime );
-
-
+	public List<Theatre> findByCityIdAndMovieId(int cityId, int movieId);
+	
 }
