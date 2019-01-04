@@ -96,5 +96,8 @@ public class BookingHistory
         this.numberOfTickets = numberOfTickets;
     }
 
-
+    @Override
+    public String toString() {
+    	return String.format("Show Id : %d , Booking Time : %s , Number of Tickets : %d ,  Total Cost : %f", showId, bookingTime, numberOfTickets, totalCost);
+    }
 }

@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Bean;
 import brave.sampler.Sampler;
 
 @SpringBootApplication
-@EnableFeignClients("com.microservices.bookmyshow.bookingservice")
+@EnableFeignClients
 @EnableDiscoveryClient
 public class BookingServiceApplication {
 

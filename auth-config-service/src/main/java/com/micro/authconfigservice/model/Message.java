@@ -1,4 +1,4 @@
-package com.service.bookmyshow.notificationservice.model;
+package com.micro.authconfigservice.model;
 
 public class Message {
 	

@@ -3,6 +3,7 @@ package com.microservices.bookmyshow.bookingservice.config;
 import org.springframework.cloud.netflix.ribbon.RibbonClient;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestHeader;
 
 import com.microservices.bookmyshow.bookingservice.dto.SeatBookingDTO;
 import com.microservices.bookmyshow.bookingservice.entity.BookingHistory;
@@ -11,6 +12,6 @@ import com.microservices.bookmyshow.bookingservice.entity.BookingHistory;
 @RibbonClient(name = "theatre-catalogue-service")
 public interface TheatreCatalogueServiceProxy
 {
-    @PostMapping("/theatre-catalogue-service/bookseats")
-    public BookingHistory bookSeats(SeatBookingDTO seatBookingDTO);
+    @PostMapping("/theatre-catalogue/bookseats")
+    public BookingHistory bookSeats(SeatBookingDTO seatBookingDTO, @RequestHeader("Authorization") String bearerToken);
 }

@@ -13,7 +13,8 @@ import org.springframework.kafka.core.ConsumerFactory;
 import org.springframework.kafka.core.DefaultKafkaConsumerFactory;
 import org.springframework.kafka.support.serializer.JsonDeserializer;
 
-import com.service.bookmyshow.notificationservice.model.Message;
+import com.micro.authconfigservice.model.Message;
+
 
 @EnableKafka
 @Configuration
